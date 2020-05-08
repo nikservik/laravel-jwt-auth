@@ -1,0 +1,30 @@
+{
+    "name": "nikservik/laravel-jwt-auth",
+    "description": "JWT auth api for Laravel",
+    "type": "laravel-package",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sergey Nikiforov",
+            "email": "ser.nikiforov@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^7.2.5",
+        "laravel/framework": "^7.0",
+        "tymon/jwt-auth": "dev-develop"
+    },
+    "autoload": {
+        "psr-4": {
+            "Nikservik\\LaravelJwtAuth\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Nikservik\\LaravelJwtAuth\\LaravelJwtAuthServiceProvider"
+            ]
+        }
+    }
+}
