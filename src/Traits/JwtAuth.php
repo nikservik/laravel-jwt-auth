@@ -26,7 +26,6 @@ trait JwtAuth
 
     public function sendPasswordResetNotification($token)
     {
-        $message = (new PasswordReset($this, $token))->onQueue('emails');
-        Mail::to($this->email)->queue($message);
+        Mail::to($this->email)->queue(new PasswordReset($this, $token));
     }    
 }
